@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <title>CCP FlashCards</title>
+</head>
+<body>
+    <div class="container text-start">
+      <h1>Welcome to the AWS FlashCards Repository</h1>
+      <p>
+        This is intended to help learners as me so you can have 
+        most of the main AWS services in a glance. I found this very helpful
+        thanks to my fabolous teacher Jess that was very persistent 
+        in the use of FlashCards so I would like to save I little of
+        the precious time and this way you can focus on the important
+        studying. The descriptions are meant to be short and clear so
+        it is easier to memorize. I hope you find it useful !!!
+      </p>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" 
+                id="compute-tab" 
+                data-bs-toggle="tab" 
+                data-bs-target="#compute-tab-pane" 
+                type="button" 
+                role="tab" 
+                aria-controls="compute-tab-pane" 
+                aria-selected="true">
+                                      Compute</button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" 
+                id="storage-tab" 
+                data-bs-toggle="tab" 
+                data-bs-target="#storage-tab-pane" 
+                type="button" 
+                role="tab" 
+                aria-controls="storage-tab-pane" 
+                aria-selected="false">
+                                      Storage</button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" 
+                id="security-tab" 
+                data-bs-toggle="tab" 
+                data-bs-target="#security-tab-pane" 
+                type="button" 
+                role="tab" 
+                aria-controls="security-tab-pane" 
+                aria-selected="false">
+                                      Security</button>
+      </li>
+
+    </ul>
+
+
+    <div class="tab-content d-flex p-2" id="myTabContent">
+      <div class="tab-pane fade show active d-flex grid gap-2" 
+            id="compute-tab-pane" 
+            role="tabpanel" 
+            aria-labelledby="compute-tab" 
+            tabindex="0">
+
+          <div 
+            class="grid gap-2" 
+            id="compute-flashcards">
+          </div>
+
+          <script type="module">
+            import codeCharger from './codeCharger.js';
+            codeCharger('computeCards.html','compute-flashcards')
+          </script>
+
+      </div>
+
+      <div class="tab-pane" 
+            id="storage-tab-pane" 
+            role="tabpanel" 
+            aria-labelledby="storage-tab" 
+            tabindex="0">
+
+            <div
+              class="grid gap-2" 
+              id="storage-flashcards">
+            </div>
+
+            <script type="module">
+              import codeCharger from './codeCharger.js';
+              codeCharger('storageCards.html','storage-flashcards')
+            </script>
+
+      </div>
+
+      <div class="tab-pane"  
+            id="security-tab-pane" 
+            role="tabpanel" 
+            aria-labelledby="security-tab" 
+            tabindex="0">
+
+            <div 
+              class="grid gap-2"  
+              id="security-flashcards">
+            </div>
+
+            <script type="module">
+              import codeCharger from './codeCharger.js';
+              codeCharger('securityCards.html','security-flashcards')
+            </script>
+      </div>
+    </div>
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+</body>
+</html>
